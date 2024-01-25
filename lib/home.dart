@@ -15,18 +15,18 @@ class Home extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              OutlinedButton(onPressed: () {}, child: const Text('C')),
+              OutlinedButton(
+                  onPressed: () async {
+                    await FirebaseFirestore.instance.collection('username').doc('aaa').set({
+                      'nama': 'coco',
+                      'umur': 12,
+                    });
+                  },
+                  child: const Text('C')),
               const SizedBox(height: 20),
               OutlinedButton(
                 onPressed: () async {
-                  final result = await FirebaseFirestore.instance.collection('username').get();
-                  debugPrint(result.toString());
-                  debugPrint(result.docs.toString());
-                  debugPrint(result.docs[0].toString());
-                  debugPrint(result.docs[0].id.toString());
-                  debugPrint(result.docs[0].data().toString());
-                  debugPrint(result.docs[0].data()['nama'].toString());
-                  debugPrint(result.docs[0].data()['umur'].toString());
+                  await FirebaseFirestore.instance.collection('username').get();
                 },
                 child: const Text('R'),
               ),
