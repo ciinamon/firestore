@@ -6,11 +6,12 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Firestore'),
-        backgroundColor: Colors.cyan,
-      ),
-      body: Container(),
-    );
+        appBar: AppBar(
+          title: const Text('Username List'),
+          backgroundColor: Colors.cyan,
+        ),
+        body: Column(
+          children: [],
+        ));
   }
 }
