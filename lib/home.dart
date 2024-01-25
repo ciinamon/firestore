@@ -10,8 +10,20 @@ class Home extends StatelessWidget {
           title: const Text('Username List'),
           backgroundColor: Colors.cyan,
         ),
-        body: Column(
-          children: [],
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              OutlinedButton(onPressed: () {}, child: const Text('C')),
+              const SizedBox(height: 20),
+              OutlinedButton(onPressed: () {}, child: const Text('R')),
+              const SizedBox(height: 20),
+              OutlinedButton(onPressed: () {}, child: const Text('U')),
+              const SizedBox(height: 20),
+              OutlinedButton(onPressed: () {}, child: const Text('D')),
+              const SizedBox(height: 20),
+            ],
+          ),
         ));
   }
 }
